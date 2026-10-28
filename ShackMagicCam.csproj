@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Shack Magic Cam is a fork of Cartur's Build Camera (GPL-3.0), so it is GPL-3.0 too. See LICENSE.txt. -->
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>ShackMagicCam</AssemblyName>
+    <RootNamespace>TheShack.MagicCam</RootNamespace>
+    <Version>1.0.0</Version>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <DebugType>none</DebugType>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <Product>Shack Magic Cam</Product>
+    <Copyright>GPL-3.0. Portions copyright Cartur (jekkle), Azumatt and gittywithexcitement.</Copyright>
+    <ValheimManaged>$(HOME)/.steam/steam/steamapps/common/Valheim/valheim_Data/Managed</ValheimManaged>
+    <ProfileRoot>$(HOME)/.config/r2modmanPlus-local/Valheim/profiles/The Shack Next/BepInEx</ProfileRoot>
+  </PropertyGroup>
+
+  <!-- Compile-time references only; the game, BepInEx and Jotunn supply them at runtime.
+       The game assemblies are not publicized: the private members this mod needs go through
+       HarmonyLib accessors in Access.cs. -->
+  <ItemGroup>
+    <Reference Include="BepInEx" HintPath="$(ProfileRoot)/core/BepInEx.dll" Private="false" />
+    <Reference Include="0Harmony" HintPath="$(ProfileRoot)/core/0Harmony.dll" Private="false" />
+    <Reference Include="Jotunn" HintPath="$(ProfileRoot)/plugins/ValheimModding-Jotunn/Jotunn.dll" Private="false" />
+    <Reference Include="assembly_valheim" HintPath="$(ValheimManaged)/assembly_valheim.dll" Private="false" />
+    <Reference Include="assembly_utils" HintPath="$(ValheimManaged)/assembly_utils.dll" Private="false" />
+    <Reference Include="assembly_guiutils" HintPath="$(ValheimManaged)/assembly_guiutils.dll" Private="false" />
+    <Reference Include="UnityEngine" HintPath="$(ValheimManaged)/UnityEngine.dll" Private="false" />
+    <Reference Include="UnityEngine.CoreModule" HintPath="$(ValheimManaged)/UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="UnityEngine.PhysicsModule" HintPath="$(ValheimManaged)/UnityEngine.PhysicsModule.dll" Private="false" />
+    <Reference Include="UnityEngine.ParticleSystemModule" HintPath="$(ValheimManaged)/UnityEngine.ParticleSystemModule.dll" Private="false" />
+    <Reference Include="UnityEngine.InputLegacyModule" HintPath="$(ValheimManaged)/UnityEngine.InputLegacyModule.dll" Private="false" />
+    <Reference Include="UnityEngine.UI" HintPath="$(ValheimManaged)/UnityEngine.UI.dll" Private="false" />
+    <Reference Include="UnityEngine.UIModule" HintPath="$(ValheimManaged)/UnityEngine.UIModule.dll" Private="false" />
+    <Reference Include="UnityEngine.TextRenderingModule" HintPath="$(ValheimManaged)/UnityEngine.TextRenderingModule.dll" Private="false" />
+    <Reference Include="Unity.TextMeshPro" HintPath="$(ValheimManaged)/Unity.TextMeshPro.dll" Private="false" />
+  </ItemGroup>
+
+</Project>

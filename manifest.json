@@ -1,0 +1,10 @@
+{
+  "name": "Shack_Magic_Cam",
+  "version_number": "1.0.0",
+  "website_url": "",
+  "description": "The Shack's build camera: press Y with a hammer, hoe or cultivator near a workbench and fly the camera to build from above. GPL-3 fork of Cartur's Build Camera with its 1.1.1 fixes. Settings sync from the server.",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.2351",
+    "ValheimModding-Jotunn-2.30.2"
+  ]
+}
